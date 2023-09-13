@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+
+      <div class="row">
+        <span class="text1">Welcome to</span>
+        <span class="text2">stellercars</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+
+    <!-- <form action="connect.php" method="post"> -->
+      <form>
+        <h2>Car Options:</h2>
+      <label><input type="checkbox" name="car[]" value="Sedan"> Sedan</label>
+      <label><input type="checkbox" name="car[]" value="SUV"> SUV</label>
+      <label><input type="checkbox" name="car[]" value="Truck"> Truck</label>
+
+      <h2>Your Information:</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <input type="submit" value="Submit">
+      </form>
+  
+      
+  
+  <div id="responseMessage"></div>
+  
+
+
+
+
+  </main>
+
+  <script>
+    const loginForm = document.querySelector('#login-form');
+    const signupForm = document.querySelector('#signup-form');
+    const toggleBtn = document.querySelector('#toggle-signup');
+
+    toggleBtn.addEventListener('click', function () {
+      if (signupForm.style.display === 'none') {
+        signupForm.style.display = 'block';
+        loginForm.style.display = 'none';
+        signupForm.style.animation = 'formFadeIn 0.5s';
+      } else {
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        loginForm.style.animation = 'formFadeIn 0.5s';
+      }
+    });
+
+    const switchLogin = document.querySelector('#toggle-login');
+
+    switchLogin.addEventListener('click', function () {
+      if (loginForm.style.display === 'none') {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+        loginForm.style.animation = 'formFadeIn 0.5s';
+      } else {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+        signupForm.style.animation = 'formFadeIn 0.5s';
+      }
+    });
+  </script>
+  </body>
+ </html>
